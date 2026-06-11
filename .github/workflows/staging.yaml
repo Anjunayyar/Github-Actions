@@ -1,0 +1,24 @@
+name: Staging Workflow
+on:
+  push:
+    branches: { "Staging"}
+jobs:
+    build:
+      runs-on:  ubuntu-latest
+
+      steps:
+        -   name: checking out the code
+            uses: actions/checkout@v4
+
+        -   name: run a one line script
+            run: echo hello Anju! you built a github actions workflow fir staging branches
+    test:
+      needs:  build
+      runs-on: ubuntu-latest
+
+      steps:  
+        -   name: checking out the code
+            uses: actions/checkout@v4
+
+        -   name: run a one-line script
+            run: echo Hello Anju! you built a git hub actions workflow for staging and thi sis the one
