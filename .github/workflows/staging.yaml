@@ -1,7 +1,7 @@
 name: Staging Workflow
 on:
   push:
-    branches: { "Staging"}
+    branches: ["Staging"]
 jobs:
     build:
       runs-on:  ubuntu-latest
